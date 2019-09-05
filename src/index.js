@@ -5,9 +5,7 @@ const models =require('./models');
 // Construct a schema, using GraphQL schema language
 const typeDefs = require('./graphql/schema');
 const resolvers = require('./graphql/resolvers');
-const sequelize = require('./models/index');
-
-  
+ 
 const server = new ApolloServer({
   typeDefs,
   resolvers,
@@ -17,7 +15,7 @@ const server = new ApolloServer({
 
 const app = express();
 server.applyMiddleware({ app });
-
+models.sequelize.authenticate ();
 models.sequelize.sync()
   .then(function(){
 app.listen(4000, () => 
