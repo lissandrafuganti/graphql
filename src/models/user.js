@@ -1,4 +1,4 @@
-import { Sequelize } from ".";
+import { Sequelize } from "./index";
 
 const user = (sequelize, DataTypes) => {
   const User = sequelize.define(

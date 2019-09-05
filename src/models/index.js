@@ -20,6 +20,6 @@ const models = {
   User: sequelize.import("./user")
 };
 
-export { sequelize,Sequelize };
+export { sequelize,Sequelize,models };
 
 export default models;
